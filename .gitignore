@@ -1,7 +1,7 @@
 # Secrets
 .env
 
-# OpenClaw workspace state (created when openclaw uses this as workspace)
+# OpenClaw workspace state
 .openclaw/
 BOOTSTRAP.md
 IDENTITY.md
@@ -10,11 +10,17 @@ USER.md
 TOOLS.md
 HEARTBEAT.md
 
-# Runtime artifacts & results
-targets/
-skill.md
-knowledgebase.md
+# Runtime artifacts (captured traffic, not findings)
+results/targets/*/LOCK
+results/targets/*/proxy-bodies/
+results/targets/*/proxy-requests/
+results/targets/*/proxy-responses/
+results/targets/**/proxy-*.jsonl
 *.log
 
 # OS
 .DS_Store
+
+# Codex worker temp artifacts
+.tmp-*/
+__pycache__/

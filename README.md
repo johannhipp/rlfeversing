@@ -1,8 +1,32 @@
 # rlfeversing
 
-> **🔬 Results incoming** — the RALF loops are running right now. Final `knowledgebase.md` and `skill.md` will be pushed in a few hours.
+Reverse engineering project for coding agent harnesses, built during Ralphthon SF on March 28th 2026.
 
-Reverse engineering project for proprietary harnesseses, built during Ralphthon SF on March 28th 2026.
+## Results
+
+All output lives in [`results/`](results/):
+
+| File | What |
+|------|------|
+| [`results/skill.md`](results/skill.md) | Battle-tested RE playbook — evolved by agents over ~200 cycles |
+| [`results/knowledgebase.md`](results/knowledgebase.md) | Cross-agent findings, patterns, and dead ends |
+| [`results/targets/<name>/findings.md`](results/targets/) | Per-agent detailed analysis (10 agents) |
+| [`results/<name>-proxy/`](results/) | Proxy repos for intercepting agent traffic (8 built) |
+
+### Targets analyzed
+
+| Agent | Type | Proxy | Findings |
+|-------|------|-------|----------|
+| Claude Code | closed-source | ✅ | [findings](results/targets/claude-code/findings.md) |
+| Codex | open-source | ✅ | [findings](results/targets/codex/findings.md) |
+| Amp | closed-source | ✅ | [findings](results/targets/amp/findings.md) |
+| Factory | closed-source | — | [findings](results/targets/factory/findings.md) |
+| OpenCode | open-source | ✅ | [findings](results/targets/opencode/findings.md) |
+| Cursor | closed-source | ✅ | [findings](results/targets/cursor/findings.md) |
+| Windsurf | closed-source | — | [findings](results/targets/windsurf/findings.md) |
+| Aider | open-source | ✅ | [findings](results/targets/aider/findings.md) |
+| Cline | open-source | ✅ | [findings](results/targets/cline/findings.md) |
+| Continue | open-source | ✅ | [findings](results/targets/continue/findings.md) |
 
 ## Architecture
 
@@ -139,19 +163,21 @@ continue
 ```
 rlfeversing/
 ├── README.md
-├── prompt.md            # RALF loop instructions (you write this)
-├── skill.md             # evolving RE playbook (starts empty, agents refine it)
-├── knowledgebase.md     # shared findings across all targets
+├── prompt.md            # RALF loop instructions
 ├── targets.txt          # agents to reverse engineer
 ├── openclaw.config.json # openclaw configuration
-└── targets/             # output directory (per-agent findings)
-    ├── claude-code/
-    │   ├── LOCK         # present while a worker is active
-    │   ├── profile.md
-    │   ├── hypotheses.md
-    │   ├── probes.log
-    │   └── findings.md
-    ├── codex/
-    ├── amp/
-    └── ...
+├── launch.sh            # per-target worker launcher
+├── run.sh               # orchestrator (spawns all workers)
+├── AGENTS.md            # openclaw agent instructions
+└── results/             # all output from the RALF loops
+    ├── skill.md          # evolving RE playbook
+    ├── knowledgebase.md  # shared findings
+    ├── targets/          # per-agent findings
+    │   ├── claude-code/findings.md
+    │   ├── codex/findings.md
+    │   └── ...
+    └── *-proxy/          # proxy repos for traffic interception
+        ├── codex-proxy/
+        ├── continue-proxy/
+        └── ...
 ```
