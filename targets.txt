@@ -1,0 +1,10 @@
+claude-code
+codex
+amp
+factory
+opencode
+cursor
+windsurf
+aider
+cline
+continue

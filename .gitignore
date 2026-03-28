@@ -1,0 +1,20 @@
+# Secrets
+.env
+
+# OpenClaw workspace state (created when openclaw uses this as workspace)
+.openclaw/
+BOOTSTRAP.md
+IDENTITY.md
+SOUL.md
+USER.md
+TOOLS.md
+HEARTBEAT.md
+
+# Runtime artifacts & results
+targets/
+skill.md
+knowledgebase.md
+*.log
+
+# OS
+.DS_Store

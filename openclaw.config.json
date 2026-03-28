@@ -1,0 +1,12 @@
+{
+  "remote": "telegram",
+  "worker": "codex",
+  "max_concurrent": 10,
+  "targets_file": "targets.txt",
+  "output_dir": "targets",
+  "assignment": "one-to-one",
+  "lock_file": "LOCK",
+  "worker_command": "./launch.sh ${TARGET}",
+  "orchestrator": "./run.sh",
+  "shared_files": ["skill.md", "knowledgebase.md"]
+}
