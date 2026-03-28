@@ -1,17 +1,19 @@
 # rlfeversing
 
-Reverse engineering project for coding agent harnesses, built during Ralphthon SF on March 28th 2026.
+Reverse engineering project for coding agent harnesses, built during Ralphthon SF on March 28th 2026. 
+
+Burned through all $100 of OpenAI API credits in the process, therefore these are the results as of 14:13 PT.
+
+My take: findings are sound but way too much of the usual AI gibberish language. I'd have to rewrite all of the `*.md` files to actually make these usefull :(
 
 ## Results
 
 All output lives in [`results/`](results/):
 
-| File | What |
-|------|------|
-| [`results/skill.md`](results/skill.md) | Battle-tested RE playbook — evolved by agents over ~200 cycles |
-| [`results/knowledgebase.md`](results/knowledgebase.md) | Cross-agent findings, patterns, and dead ends |
-| [`results/targets/<name>/findings.md`](results/targets/) | Per-agent detailed analysis (10 agents) |
-| [`results/<name>-proxy/`](results/) | Proxy repos for intercepting agent traffic (8 built) |
+- [`results/skill.md`](results/skill.md) — 194 cycles on this
+- [`results/knowledgebase.md`](results/knowledgebase.md) — cross-agent findings, patterns, and dead ends
+- [`results/targets/<name>/findings.md`](results/targets/) — per-agent detailed analysis
+- [`results/<name>-proxy/`](results/) — proxy repos for intercepting agent traffic
 
 ### Targets analyzed
 
