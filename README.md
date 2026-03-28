@@ -30,6 +30,28 @@ All output lives in [`results/`](results/):
 | Cline | open-source | ✅ | [findings](results/targets/cline/findings.md) |
 | Continue | open-source | ✅ | [findings](results/targets/continue/findings.md) |
 
+### Stats
+
+| Metric | Value |
+|--------|-------|
+| Total RALF cycles | ~245 |
+| Wall clock time | ~1.5 hours |
+| Targets analyzed | 10 |
+| Proxy repos built | 8 |
+| Total output files | 49 |
+| Total lines generated | 8,896 |
+| Findings across targets | 2,617 lines |
+| RE techniques discovered | 80 |
+| Dead ends documented | 6 |
+| Cross-agent patterns | 30 |
+| Proxy code written | 5,807 lines |
+| Cost | $100 in OpenAI API credits |
+
+- **~$0.41 per cycle** average
+- Skill file went from 3 lines (empty template) to 92 lines with 80 concrete techniques
+- Windsurf got 321 lines of findings despite having no local binary — pure docs/hooks RE
+- Codex agent discovered its own target uses WebSocket alongside HTTP
+
 ## Architecture
 
 ```
