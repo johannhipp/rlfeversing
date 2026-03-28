@@ -46,11 +46,7 @@ All output lives in [`results/`](results/):
 | Cross-agent patterns | 30 |
 | Proxy code written | 5,807 lines |
 | Cost | $100 in OpenAI API credits |
-
-- **~$0.41 per cycle** average
-- Skill file went from 3 lines (empty template) to 92 lines with 80 concrete techniques
-- Windsurf got 321 lines of findings despite having no local binary — pure docs/hooks RE
-- Codex agent discovered its own target uses WebSocket alongside HTTP
+| Cost Avg | $0.41 per cycle |
 
 ## Architecture
 
