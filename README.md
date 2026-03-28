@@ -1,6 +1,8 @@
 # rlfeversing
 
-Reverse engineering project for harnesses. Targets: Claude Code, Codex, Amp, Factory, OpenCode, etc.
+> **🔬 Results incoming** — the RALF loops are running right now. Final `knowledgebase.md` and `skill.md` will be pushed in a few hours.
+
+Reverse engineering project for proprietary harnesseses, built during Ralphthon SF on March 28th 2026.
 
 ## Architecture
 
